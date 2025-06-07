@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build
-        run: npm run export
+        run: npm run build
       - name: Create .nojekyll file
         run: touch ./out/.nojekyll
       - name: Setup Pages
