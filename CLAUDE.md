@@ -88,10 +88,89 @@ aistylist/
 ## Testing & Quality
 - TypeScript for type safety
 
+## AI Fashion Features
+- **Machine Learning Recommendations**: Advanced algorithms analyze personal style preferences, body type, and lifestyle factors
+- **Weather Integration**: Real-time weather data integration for climate-appropriate styling suggestions
+- **Color Theory Application**: Sophisticated color harmony analysis ensuring cohesive outfit combinations
+- **Style Evolution Tracking**: Monitor and adapt to changing personal style preferences over time
+- **Wardrobe Analytics**: Comprehensive insights into garment utilization, cost-per-wear calculations, and style gaps
+
+## Fashion Technology Capabilities
+- **Smart Cataloging**: Digital wardrobe creation with detailed garment metadata and categorization
+- **Outfit History**: Track and rediscover successful outfit combinations
+- **Seasonal Rotation**: Intelligent wardrobe planning across climate changes
+- **Brand Integration**: Future marketplace integrations for seamless shopping experiences
+- **Social Sharing**: Community-driven style sharing and trend identification
+
+## Target User Segments
+- **Fashion Enthusiasts**: Personal style optimization and trend discovery
+- **Professional Stylists**: Enterprise-grade tools for client management and styling workflows
+- **Busy Professionals**: Quick, intelligent outfit recommendations for daily wear
+- **Fashion Students**: Educational tools for learning color theory and style principles
+
 ## Future Enhancements
-- Performance optimizations
-- Advanced analytics integration
-- Enhanced user experience features
-- API integrations
-- Mobile app development
+- **Computer Vision**: Automatic garment recognition and categorization from photos
+- **AR Try-On**: Virtual fitting and visualization capabilities
+- **Sustainability Scoring**: Environmental impact tracking for conscious fashion choices
+- **Professional Marketplace**: Platform for stylist services and fashion consultations
+- **AI Style Coach**: Personalized fashion education and improvement recommendations
+- **Biometric Integration**: Body measurement tracking for optimal fit recommendations
+
+
+
+## 🧭 Claude Code Navigation
+
+### Quick Commands
+**Development Scripts:**
+- `dev`: next dev
+- `build`: next build
+- `start`: next start
+- `lint`: next lint
+- `deploy`: gh-pages -d out
+
+**Key Files:**
+- `package.json` - Dependencies and scripts configuration
+- `README.md` - Project documentation and setup guide
+- `CLAUDE.md` - Comprehensive development guide for Claude
+- `next.config.mjs` - Next.js framework configuration
+- `tailwind.config.ts` - Tailwind CSS styling configuration
+- `tsconfig.json` - TypeScript compiler configuration
+- `components.json` - shadcn/ui components configuration
+
+**Key Directories:**
+- `app/` - Next.js App Router pages and layouts
+- `components/` - Reusable React components
+- `lib/` - Utility functions and shared logic
+- `hooks/` - Custom React hooks
+- `public/` - Static assets (images, icons, etc.)
+- `styles/` - CSS and styling files
+
+**Claude Code Files:**
+- `.claude/project-context.md` - Project overview and structure
+- `.claude/coding-standards.md` - Development guidelines and patterns
+- `.claude/commands/` - Custom Claude commands for common tasks
+- `.claude/context/` - Domain-specific development context
+
+
+### Quick Reference
+
+**Common Tasks:**
+- Start development: `npm run dev` or `bun dev`
+- Build project: `npm run build` or `bun build`
+- Lint code: `npm run lint` or `bun lint`
+- Deploy: `npm run deploy` or `bun deploy`
+
+**File Patterns:**
+- Components: `components/**/*.tsx`
+- Pages: `app/**/*.tsx` or `pages/**/*.tsx`
+- Utilities: `lib/**/*.ts`
+- Styles: `**/*.css` or use Tailwind classes
+- Tests: `**/*.test.ts` or `**/*.spec.ts`
+
+**Development Tips:**
+- Use TypeScript for type safety
+- Follow existing component patterns
+- Utilize shadcn/ui components
+- Implement responsive design with Tailwind
+- Test changes before committing
 
