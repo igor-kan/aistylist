@@ -1,0 +1,142 @@
+# Set default behavior to automatically normalize line endings
+* text=auto eol=lf
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout
+*.c text
+*.h text
+*.java text
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.sass text eol=lf
+*.less text eol=lf
+*.html text eol=lf
+*.htm text eol=lf
+*.xml text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+*.conf text eol=lf
+*.sh text eol=lf
+*.bash text eol=lf
+*.fish text eol=lf
+*.zsh text eol=lf
+
+# Declare files that will always have CRLF line endings on checkout
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Denote all files that are truly binary and should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ttf binary
+*.eot binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+
+# Language-specific attributes
+
+# JavaScript/TypeScript
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+
+# Python
+*.py linguist-language=Python
+
+# Documentation and config files
+*.md linguist-documentation
+*.txt linguist-documentation
+LICENSE linguist-documentation
+CHANGELOG linguist-documentation
+CONTRIBUTING linguist-documentation
+README linguist-documentation
+
+# Configuration files
+*.json linguist-language=JSON
+*.yml linguist-language=YAML
+*.yaml linguist-language=YAML
+*.toml linguist-language=TOML
+
+# Exclude generated files from language statistics
+dist/** linguist-generated
+build/** linguist-generated
+*.min.js linguist-generated
+*.min.css linguist-generated
+node_modules/** linguist-vendored
+vendor/** linguist-vendored
+public/assets/** linguist-generated
+.next/** linguist-generated
+coverage/** linguist-generated
+__pycache__/** linguist-generated
+
+# Mark specific directories as vendored
+node_modules/* linguist-vendored
+bower_components/* linguist-vendored
+vendor/* linguist-vendored
+
+# Export-ignore files for git archive
+.gitignore export-ignore
+.gitattributes export-ignore
+.github/ export-ignore
+*.md export-ignore
+docs/ export-ignore
+test/ export-ignore
+tests/ export-ignore
+__tests__/ export-ignore
+spec/ export-ignore
+.vscode/ export-ignore
+.devcontainer/ export-ignore
+
+# Diff settings for specific file types
+*.json diff=json
+*.md diff=markdown
+package-lock.json -diff -merge linguist-generated
+yarn.lock -diff -merge linguist-generated
+pnpm-lock.yaml -diff -merge linguist-generated
+# Node.js specific
+package-lock.json -diff -merge linguist-generated
+yarn.lock -diff -merge linguist-generated
+pnpm-lock.yaml -diff -merge linguist-generated
+.next/ linguist-generated
+dist/ linguist-generated
+build/ linguist-generated
+
+# Next.js specific
+next-env.d.ts linguist-generated
+.next/** linguist-generated
+out/** linguist-generated
+
+
+# VS Code specific
+.vscode/*.json text eol=lf
+

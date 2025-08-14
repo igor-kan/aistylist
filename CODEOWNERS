@@ -1,0 +1,44 @@
+# Global owners - these users will be requested for review when someone opens a pull request
+* @igor-kan
+
+# Frontend specific files
+*.js @igor-kan
+*.jsx @igor-kan  
+*.ts @igor-kan
+*.tsx @igor-kan
+*.vue @igor-kan
+
+# Styling files
+*.css @igor-kan
+*.scss @igor-kan
+*.sass @igor-kan
+*.less @igor-kan
+
+# Configuration files
+package.json @igor-kan
+package-lock.json @igor-kan
+tsconfig.json @igor-kan
+*.config.js @igor-kan
+*.config.ts @igor-kan
+
+# Build and deployment files
+Dockerfile* @igor-kan
+docker-compose*.yml @igor-kan
+.github/ @igor-kan
+
+# Documentation
+*.md @igor-kan
+docs/ @igor-kan
+
+# Node.js specific files
+yarn.lock @igor-kan
+pnpm-lock.yaml @igor-kan
+.nvmrc @igor-kan
+
+# Next.js specific files
+next.config.* @igor-kan
+next-env.d.ts @igor-kan
+app/ @igor-kan
+pages/ @igor-kan
+public/ @igor-kan
+

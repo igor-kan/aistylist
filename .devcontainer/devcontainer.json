@@ -1,0 +1,105 @@
+{
+  "name": "aistylist - Next.js Development",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  
+  // Alternative: Use a pre-built image
+  // "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  
+  // Features to add to the dev container
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+
+  // Configure tool-specific properties
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "bradlc.vscode-tailwindcss", 
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "ms-vscode.vscode-json",
+        "ms-vscode.vscode-react-devtools",
+        "formulahendry.auto-rename-tag",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "editorconfig.editorconfig",
+        "eamodio.gitlens",
+        "github.copilot",
+        "github.copilot-chat",
+        "ms-azuretools.vscode-docker",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "typescript.updateImportsOnFileMove.enabled": "always",
+        "typescript.suggest.autoImports": true,
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally
+  "forwardPorts": [3000, 3001],
+  "portsAttributes": {
+    "3000": {
+      "label": "Next.js Dev Server",
+      "onAutoForward": "notify"
+    }
+  },
+
+  // Commands to run after the container is created
+  "postCreateCommand": "npm install && npm run build",
+  
+  // Commands to run when attaching to the container
+  "postAttachCommand": "echo 'Welcome to aistylist development environment! Run npm run dev to start.'",
+
+  // Use 'postStartCommand' to run commands after the container starts
+  "postStartCommand": "git config --global --add safe.directory /workspace",
+
+  // Set environment variables
+  "containerEnv": {
+    "NODE_ENV": "development",
+    "CHOKIDAR_USEPOLLING": "true"
+  },
+
+  // Mount the host's SSH keys
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached"
+  ],
+
+  // Configure container user
+  "remoteUser": "node",
+  "updateRemoteUserUID": true,
+
+  // Configure container startup
+  "runArgs": [
+    "--init"
+  ],
+
+  // Configure workspace settings
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  
+  // Development server will be available at these URLs
+  "appPort": [3000, 3001],
+
+  // Override the container's default command
+  "overrideCommand": false,
+
+  // Set to true to run the container with --init
+  "init": true,
+
+  // Set to true to connect as an existing user other than root
+  "updateRemoteUserUID": true
+}
